@@ -21,7 +21,13 @@ As a user, I should be able to:
 
 ## Wireframes
 
+![Home page](https://user-images.githubusercontent.com/98237174/167046609-00480f4a-68e7-4564-8e93-6b32391f38b9.PNG)
+![Donut Shop page](https://user-images.githubusercontent.com/98237174/167046622-3e583ec1-3cbc-44f3-9c94-d5a8cab1d579.PNG)
+![Cart page](https://user-images.githubusercontent.com/98237174/167046626-6d39b379-add1-4b77-a8ab-8023723a0072.PNG)
+![Profile page](https://user-images.githubusercontent.com/98237174/167046634-cccdd0f7-4d6d-41ee-9d72-c973283964d6.PNG)
 
 
 ## ERD Model
+
+![5th dbdiagram](https://user-images.githubusercontent.com/98237174/167046645-5b84dc71-a864-4a39-a5d6-992c09554457.PNG)
 
