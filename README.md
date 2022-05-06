@@ -1,8 +1,8 @@
-# Project Template: React/Rails API
+# The Donut Picker 
 
-## Description
+## Project Pitch
 
-Hello world
+
 
 ## Requirements
 
