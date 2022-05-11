@@ -3,7 +3,7 @@ import React from "react";
 import { Route } from "react-router-dom";
 import NavBar from "./NavBar.js"
 import Home from "./Home.js"
-import Shop from './Shop'
+import Shop from './DonuyShop/Shop'
 import Profile from "./Profile"
 import Cart from "./Cart"
 
