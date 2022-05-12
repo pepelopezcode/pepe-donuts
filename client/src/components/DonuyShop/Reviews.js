@@ -1,6 +1,7 @@
 import React from "react";
 
-function Reviews() {
+function Reviews({review}) {
+    console.log(review);
     return (
         <>
             <div class="wrapper">
@@ -10,8 +11,8 @@ function Reviews() {
                     </div>
                     <div class="container_copy">
                         
-                        <h1>CSS Positioning</h1>
-                        <p>The position property specifies the type of positioning method used for an element (static, relative, absolute, fixed, or sticky).</p>
+                        <h1>Review</h1>
+                        <p>{review.comment}</p>
                     </div>
                     <a class="btn_primary" href='#'>Read More</a>
                 </div>
