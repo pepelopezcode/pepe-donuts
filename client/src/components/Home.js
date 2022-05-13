@@ -1,11 +1,11 @@
 import React from "react";
 import DonutShopCard from "./DonutShopCard"
 
-function Home() {
+function Home({currentShop}) {
     return (
         <>
             <h1>Home</h1>
-            <DonutShopCard />
+            <DonutShopCard currentShop={currentShop} />
         </>
     )
 }

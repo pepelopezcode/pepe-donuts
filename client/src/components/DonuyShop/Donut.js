@@ -9,7 +9,7 @@ function Donut({donut}) {
             <div id="container">
                 <div className="product-details">
                     <h1>{donut.name}</h1>
-                    <p className="information">These fried doughnuts are of Italian origin. Their texture can either be fluffy or dense, depending on what type of dough they're made with. They're often topped with a sprinkle of powdered sugar.</p>
+                    <p className="information">{donut.description}</p>
                     <div className="control">
                         <button className="btn">
                             <span className="price">$5</span>

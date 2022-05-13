@@ -6,32 +6,41 @@ Donut.destroy_all
 DonutShop.destroy_all 
 Review.destroy_all
 
-user1 = User.create(username: Faker::Name.name, email: "1231@gmail.com", password_digest: '12345678', image_url: 'https://images.unsplash.com/photo-1492633423870-43d1cd2775eb?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80')
-user2 = User.create(username: Faker::Name.name, email: "1232@gmail.com", password_digest: '12345678', image_url: 'https://images.unsplash.com/photo-1610795384821-2eed2f416f16?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80')
-user3 = User.create(username: Faker::Name.name, email: "1233@gmail.com", password_digest: '12345678', image_url: 'https://images.unsplash.com/photo-1531427186611-ecfd6d936c79?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80')
-user4 = User.create(username: Faker::Name.name, email: "1234@gmail.com", password_digest: '12345678', image_url: 'https://images.unsplash.com/photo-1533530448489-c12663a612cc?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80')
-user5 = User.create(username: Faker::Name.name, email: "1235@gmail.com", password_digest: '12345678', image_url: 'https://images.unsplash.com/photo-1623252327694-ca5ed9b6378f?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80')
-user6 = User.create(username: Faker::Name.name, email: "1236@gmail.com", password_digest: '12345678', image_url: 'https://images.unsplash.com/photo-1464863979621-258859e62245?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1972&q=80')
+user1 = User.create(username: 'HairyPoppins', email: "1231@gmail.com", password_digest: '12345678', image_url: 'https://i.pinimg.com/originals/7c/c7/a6/7cc7a630624d20f7797cb4c8e93c09c1.png')
+user2 = User.create(username: 'fluffycookie ', email: "1232@gmail.com", password_digest: '12345678', image_url: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRxizVEW0-O-O42lvNwOenbn8jtTiYpyUtNvQ&usqp=CAU')
+user3 = User.create(username: 'averagestudent', email: "1233@gmail.com", password_digest: '12345678', image_url: 'https://www.publicdomainpictures.net/pictures/120000/nahled/avatar-icon.jpg')
+user4 = User.create(username: 'shaquille.oatmeal', email: "1234@gmail.com", password_digest: '12345678', image_url: 'https://freepikpsd.com/file/2019/10/avatar-icon-png-5-Images-PNG-Transparent.png')
+user5 = User.create(username: 'YellowSnowman', email: "1235@gmail.com", password_digest: '12345678', image_url: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQRqRyIiwYCq4s-fZi1zdmyfSuIPUvg9EyZ_Q&usqp=CAU')
+user6 = User.create(username: 'anonymouse', email: "1236@gmail.com", password_digest: '12345678', image_url: 'https://images.unsplash.com/photo-1464863979621-258859e62245?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1972&q=80')
 
-donut_shop1 = DonutShop.create(name: 'Davids Donuts')
-donut_shop2 = DonutShop.create(name: 'The Donut Stop')
+donut_shop1 = DonutShop.create(name: 'The Donut Stop')
+
+
+
+
+donut_shop2 = DonutShop.create(name: 'DoDoDonuts')
+
+
+
+
+
 donut_shop3 = DonutShop.create(name: 'Not Yo Donuts')
 
 
-donut1 = Donut.create(name: 'glazed', image_url: '', donut_shop_id: donut_shop1.id)
-donut2 = Donut.create(name: 'jelly', image_url: '', donut_shop_id: donut_shop1.id)
-donut3 = Donut.create(name: 'chocolate bar', image_url: '', donut_shop_id: donut_shop1.id)
-donut4 = Donut.create(name: 'maple bar', image_url: '', donut_shop_id: donut_shop1.id)
-donut5 = Donut.create(name: 'sugar', image_url: '', donut_shop_id: donut_shop1.id)
-donut6 = Donut.create(name: 'glazed twist', image_url: '', donut_shop_id: donut_shop1.id)
-donut7 = Donut.create(name: 'chocolate sprinkle', image_url: '', donut_shop_id: donut_shop1.id)
-donut8 = Donut.create(name: 'vanilla sprinkle', image_url: '', donut_shop_id: donut_shop1.id)
-donut9 = Donut.create(name: 'donut holes', image_url: '', donut_shop_id: donut_shop1.id)
-donut10 = Donut.create(name: 'old fasioned', image_url: '', donut_shop_id: donut_shop1.id)
-donut11 = Donut.create(name: 'bear claw', image_url: '', donut_shop_id: donut_shop1.id)
-donut12 = Donut.create(name: 'suagr twist', image_url: '', donut_shop_id: donut_shop1.id)
-donut13 = Donut.create(name: 'hot chocolate', image_url: '', donut_shop_id: donut_shop1.id)
-donut14 = Donut.create(name: 'coffee', image_url: '', donut_shop_id: donut_shop1.id)
+donut1 = Donut.create(name: 'glazed', image_url: '', description: "These fried doughnuts are of Italian origin. Their texture can either be fluffy or dense, depending on what type of dough they're made with. They're often topped with a sprinkle of powdered sugar.", donut_shop_id: donut_shop1.id)
+donut2 = Donut.create(name: 'jelly', image_url: '', description: 'A jam doughnut or jelly donut, is a doughnut filled with jam filling. Varieties include Polish Pączki, German Berliner, sufganiyot in Israel, jam-filled doughnuts (in Australia, Britain, New Zealand and Nigeria), and jelly-filled doughnuts (in the United States and Canada)', donut_shop_id: donut_shop2.id)
+donut3 = Donut.create(name: 'chocolate bar', image_url: '', description: 'A chocolate donut is a fried bread-based confection that is either made with, topped with, or filled with chocolate. Donuts and donut-style desserts are popular in many countries around the world.', donut_shop_id: donut_shop3.id)
+donut4 = Donut.create(name: 'maple bar', image_url: '', description: 'A maple bar is a rectangular doughnut topped with a maple glaze. They can be filled with custard, or cream, or left unfilled. Maple bars are prominent on the West coast of the United States. Maple bars are also known as a maple-glazed Long John, Maple-Creamstick or maple Bismarck', donut_shop_id: donut_shop1.id)
+donut5 = Donut.create(name: 'sugar', image_url: '', description: 'Simple Sugar Donuts - The dough is made with flour, water, yeast and sugar, then the donuts are fried and dredged in sugar.', donut_shop_id: donut_shop2.id)
+donut6 = Donut.create(name: 'glazed twist', image_url: '', description: 'A glaze twist is a  small ring-shaped cake made of rich, light dough that is fried in deep fat. Something whose form is reminiscent of a ring-shaped cake.', donut_shop_id: donut_shop3.id)
+donut7 = Donut.create(name: 'chocolate sprinkle', image_url: '', description: 'these Chocolate Sprinkle  are a more traditional soft and pillowy yeasted donut that is deep fried and then covered in chocolate glaze and sprinkles', donut_shop_id: donut_shop1.id)
+donut8 = Donut.create(name: 'vanilla sprinkle', image_url: '', description: 'Vanilla sprinkle donuts are double dipped in vanilla glaze, topped with sprinkles, and simple to make. It’s a very thick batter that produces tight-crumbed, cakey donuts.', donut_shop_id: donut_shop2.id)
+donut9 = Donut.create(name: 'donut holes', image_url: '', description: 'Donut holes (spelled as doughnut in England and Commonwealth countries) are small, bite-sized donuts that were traditionally made from the dough taken from the center of ring donuts. The “holes” are deep-fried just like regular donuts. They are then glazed with sugar, or dusted with fine sugar or powdered sugar.', donut_shop_id: donut_shop3.id)
+donut10 = Donut.create(name: 'old fasioned', image_url: '', description: "The old-fashioned doughnut is the jolie laide ring of dough that's cousin to the cake doughnut. It's risen with a chemical leavener and made into either batter or dough. It's fried at a lower temperature than other doughnuts, thereby creating a craggy, rough-edged specimen", donut_shop_id: donut_shop1.id)
+donut11 = Donut.create(name: 'bear claw', image_url: '', description: "A bear claw is usually filled with almond paste, and sometimes raisins, and often shaped in a semicircle with slices along the curved edge, or rectangular with partial slices along one side. As the dough rises, the sections separate, evoking the shape of a bear's toes, hence the name.", donut_shop_id: donut_shop2.id)
+donut12 = Donut.create(name: 'suagr twist', image_url: '', description: 'A sugar twist is a  small ring-shaped cake made of rich, light dough that is fried in deep fat. Something whose form is reminiscent of a ring-shaped cake.', donut_shop_id: donut_shop1.id)
+donut13 = Donut.create(name: 'hot chocolate', image_url: '', description: "Hot cocoa is a hot, sweet drink made from cocoa powder, sugar, and milk. Cocoa powder is derived from cocoa beans, which are dried, fermented, then roasted at a high temperature to sweeten the flavor.", donut_shop_id: donut_shop1.id)
+donut14 = Donut.create(name: 'coffee', image_url: '', description: "Coffee is darkly colored, bitter, slightly acidic and has a stimulating effect in humans, primarily due to its caffeine content. It is one of the most popular drinks in the world and can be prepared and presented in a variety of ways (e.g., espresso, French press, caffè latte, or already-brewed canned coffee)", donut_shop_id: donut_shop3.id)
 
 
 review1 = Review.create(comment: Faker::Quotes::Shakespeare.hamlet_quote, donut_shop_id: donut_shop1.id, user_id: user1.id)

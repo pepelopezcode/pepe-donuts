@@ -1,7 +1,7 @@
 import React from "react";
 
 function Reviews({review}) {
-    console.log(review);
+    
     return (
         <>
             <div class="wrapper">
