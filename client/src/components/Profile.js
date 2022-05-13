@@ -8,11 +8,10 @@ function Profile({user,setLoggedIn}) {
     function logoutFunc(){
         setLoggedIn(false)
         history.push("/")
-        // fetch("http://localhost:3000/logout", {
-        //     method: "DELETE",
-        // })
-        // .then(resp => resp.json())
-        // .then(data => console.log(data));
+        fetch("http://localhost:3000/logout", {
+            method: "DELETE",
+        })
+        ;
 
     }
 

@@ -44,10 +44,10 @@ function App() {
     .then((resp) => {
       if (resp.ok) {
         resp.json()
-        .then((user) => console.log(user));
+        .then((user) => setUser(user));
       }
     });
-  }, [user]);
+  }, []);
 
   
 
