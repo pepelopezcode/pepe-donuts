@@ -1,22 +1,35 @@
 import React from "react";
+import {useHistory} from "react-router-dom"
 
 
-function Profile() {
+function Profile({user,setLoggedIn}) {
+    const history = useHistory();
+
+    function logoutFunc(){
+        setLoggedIn(false)
+        history.push("/")
+        // fetch("http://localhost:3000/logout", {
+        //     method: "DELETE",
+        // })
+        // .then(resp => resp.json())
+        // .then(data => console.log(data));
+
+    }
+
     return (
-        <div>Profile
+        <div>
             
-            <div class="wrapper">
-                <div class="blog_post">
-                    <div class="img_pod">
-                        <img src="https://pbs.twimg.com/profile_images/890901007387025408/oztASP4n.jpg" alt="random image" className="reviewImage" />
-                    </div>
-                    <div class="container_copy">
+            <div className="wrapper">
+                <div className="blog_post">
+                   
+                    <div className="container_copy">
                         
-                        <h1>User Info</h1>
-                        <p>comment</p>
+                        <h1>{user.username}</h1>
+                        <p>Email:</p>
+                        <p>{user.email}</p>
                     </div>
-                    <button className="btn_primary" href='#'>Update Profile</button>
-                    <button className="btn_primary" href='#'>Update Password</button>
+                    
+                    <button className="btn_primary" href='#' onClick={() => logoutFunc()} >Logout</button>
                 </div>
             </div>
         </div>

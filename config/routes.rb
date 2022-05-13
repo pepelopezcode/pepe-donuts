@@ -8,4 +8,10 @@ Rails.application.routes.draw do
   get '/reviews', to: "reviews#index"
   get '/users', to: "users#index"
   post '/users', to: "users#create"
+  post '/login', to: "sessions#create"
+  get "/me", to: "users#show"
+  post "/reviews", to: "reviews#create"
+  delete "/logout", to: "sessions#destroy"
+  post "/cart", to: "donut_cart#create"
+  delete '/cart/:id', to: "donut_cart#destroy"
 end

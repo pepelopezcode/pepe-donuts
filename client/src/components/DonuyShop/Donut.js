@@ -1,7 +1,25 @@
 import React from "react";
 
 
-function Donut({donut}) {
+function Donut({donut, user}) {
+
+    function addToCart(){
+        fetch("http://localhost:3000/cart", {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json",
+            },
+            body: JSON.stringify({
+                donut_name: donut.name,
+                price: 1,
+                user_id: user.id
+
+            }),
+        })
+            .then((r) => r.json())
+            .then(data => console.log(data));
+    }
+    
     
     return (
         <>
@@ -11,15 +29,15 @@ function Donut({donut}) {
                     <h1>{donut.name}</h1>
                     <p className="information">{donut.description}</p>
                     <div className="control">
-                        <button className="btn">
-                            <span className="price">$5</span>
+                        <button className="btn" onClick={() => addToCart()} >
+                            <span className="price">$1</span>
                             <span className="shopping-cart"><i className="fa fa-shopping-cart" aria-hidden="true"></i></span>
                             <span className="buy">Get now</span>
                         </button>
                     </div>
                 </div>
                 <div className="product-image">
-                    <img src="https://www.justataste.com/wp-content/uploads/2014/03/glazed-doughnut-holes-recipe.jpg" alt="" />
+                    <img src={donut.image_url} alt="" />
                 </div>
             </div>
         </>

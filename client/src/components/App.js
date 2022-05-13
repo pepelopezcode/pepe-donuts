@@ -13,12 +13,20 @@ import Signup from "./Signup.js";
 
 function App() {
 
-  const [loginOrSignup, setLoginOrSignup] = useState(false)
+  const [loginOrSignup, setLoginOrSignup] = useState(true)
   const [donutShopInfo, setDonutShopInfo] = useState([])
   const [currentShop, setCurrentShop] = useState(0)
+  const [user, setUser] = useState(null)
+  const [loggedIn, setLoggedIn] = useState(false)
 
   function switchToSignup(){
     setLoginOrSignup(!loginOrSignup)
+  }
+
+  function checkIfLoggedIn(data){
+    
+    setUser(data)
+    setLoggedIn(!loggedIn)
   }
 
   useEffect(() => {
@@ -31,28 +39,35 @@ function App() {
     setCurrentShop(index)
   }
 
+  useEffect(() => {
+    fetch("http://localhost:3000/me")
+    .then((resp) => {
+      if (resp.ok) {
+        resp.json()
+        .then((user) => console.log(user));
+      }
+    });
+  }, [user]);
+
   
 
   return (
     <>
-      <NavBar />
+      {loggedIn ?<NavBar loggedIn={loggedIn}  />: undefined}
       <Route exact path="/">
-        <Home />
-      </Route>
-      <Route exact path="/home">
-        <Home currentShop={currentShopFunc}/>
+        {loggedIn ? <Home currentShop={currentShopFunc}/> :(loginOrSignup ? <Login switchToSignup={switchToSignup} setUser={setUser} checkIfLoggedIn={checkIfLoggedIn} /> : <Signup  switchToSignup={switchToSignup} checkIfLoggedIn={checkIfLoggedIn} />) }
       </Route>
       <Route exact path="/shop">
-        <Shop donutShopInfo={donutShopInfo} currentShop={currentShop} />
+        <Shop donutShopInfo={donutShopInfo} currentShop={currentShop} user={user} />
       </Route>
       <Route exact path="/cart">
-        <Cart />
+        <Cart user={user}/>
       </Route>
       <Route exact path="/profile">
-        <Profile />
+        <Profile user={user} setLoggedIn={setLoggedIn} />
       </Route>
       <Route exact path="/login">
-        {loginOrSignup ? <Login switchToSignup={switchToSignup} /> : <Signup  switchToSignup={switchToSignup}/> }
+        {loginOrSignup ? <Login switchToSignup={switchToSignup} setUser={setUser} checkIfLoggedIn={checkIfLoggedIn} /> : <Signup  switchToSignup={switchToSignup} checkIfLoggedIn={checkIfLoggedIn} /> }
       </Route>
 
     </>

@@ -1,7 +1,7 @@
 import React, {useState} from "react";
 
 
-function Signup({ switchToSignup }) {
+function Signup({ switchToSignup, checkIfLoggedIn }) {
 
     const [username, setUsername] = useState("")
     const [email, setEmail] = useState("")
@@ -24,7 +24,8 @@ function Signup({ switchToSignup }) {
             }),
         })
             .then((r) => r.json())
-            .then(data => console.log(data));
+            .then(data => data.errors ? alert(data.errors) :checkIfLoggedIn(data));
+            
     }
 
     return (
@@ -61,7 +62,7 @@ function Signup({ switchToSignup }) {
                 </label>
 
                 <input type="submit" className="submitButton" />
-                <p onClick={switchToSignup} >login?</p>
+                <p onClick={switchToSignup} className="abc" >Already Have An Account</p>
             </form>
         </div>
     )

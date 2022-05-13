@@ -345,10 +345,21 @@ p {
 }
 
 
+.abc {
+    cursor: pointer
+}
 
 
-
-
+.homeTitle {
+    font-size: 50px;
+    color: black;
+    text-align: center;
+    font-weight: 700;
+    color: #181818;
+    text-shadow: 0px 2px 2px #a6f8d5;
+    position: relative;
+    margin: 0 0 20px 0;
+}
 
 
 

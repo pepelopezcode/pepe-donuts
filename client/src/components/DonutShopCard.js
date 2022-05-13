@@ -1,4 +1,4 @@
-import React, {useEffect, useState} from "react";
+import React from "react";
 import { Link } from "react-router-dom";
 
 function DonutShopCard({currentShop}) {
@@ -13,7 +13,7 @@ function DonutShopCard({currentShop}) {
                     <div className="inner">
                         <h2 className="title">The Donut Stop</h2>
                         
-                        <h3 className="subtitle">Rating</h3>
+                        
                     </div>
 
                 </Link>
@@ -22,7 +22,7 @@ function DonutShopCard({currentShop}) {
                     <div className="inner">
                         <h2 className="title">DoDoDonuts</h2>
                         
-                        <h3 className="subtitle">Rating</h3>
+                        
                     </div>
 
                 </Link>
@@ -31,7 +31,7 @@ function DonutShopCard({currentShop}) {
                     <div className="inner">
                         <h2 className="title">Not Yo Donuts</h2>
                         
-                        <h3 className="subtitle">Rating</h3>
+                        
                     </div>
 
                 </Link>

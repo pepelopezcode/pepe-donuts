@@ -1,16 +1,17 @@
 import React from "react";
 import { Link } from "react-router-dom";
 
-function NavBar() {
+function NavBar({loggedIn}) {
+    console.log(loggedIn)
     return (
         <>
             <div>
-                <Link to="/home" className="nav" >Home</Link>
+                <Link to="/" className="nav" >Home</Link>
 
-                <Link to="/profile" className="nav" >Profile</Link>
+                {loggedIn ?<Link to="/profile" className="nav" >Profile</Link>:<Link to="/login" className="nav" >Login</Link>}
 
                 <Link to="/cart" className="nav" >Cart</Link>
-                <Link to="/login" className="nav" >Login</Link>
+                
             </div></>
     )
 }
