@@ -33,7 +33,7 @@ module ReactRailsApiProjectTemplate
     config.load_defaults 6.1
     config.middleware.insert_before 0, Rack::Cors do
       allow do
-        origins 'localhost:4000', /https*:\/\/.*?bloopist\.com/
+        origins '*', /https*:\/\/.*?bloopist\.com/
         resource '*', :headers => :any, :methods => :any
       end
     end

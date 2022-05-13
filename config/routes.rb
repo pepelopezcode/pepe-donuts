@@ -7,4 +7,5 @@ Rails.application.routes.draw do
   get '/donutShops', to: "donut_shops#index"
   get '/reviews', to: "reviews#index"
   get '/users', to: "users#index"
+  post '/users', to: "users#create"
 end

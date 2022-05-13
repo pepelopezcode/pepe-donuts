@@ -19,7 +19,7 @@ function Donut({donut}) {
                     </div>
                 </div>
                 <div className="product-image">
-                    <img src="https://images.unsplash.com/photo-1551024601-bec78aea704b?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=764&q=80" alt="" />
+                    <img src="https://www.justataste.com/wp-content/uploads/2014/03/glazed-doughnut-holes-recipe.jpg" alt="" />
                 </div>
             </div>
         </>
